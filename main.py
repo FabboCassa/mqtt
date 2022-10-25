@@ -12,6 +12,7 @@ def on_message(client, userdata, message):
     print("received message =",str(message.payload.decode("utf-8")))
     response = json.loads(message.payload, object_hook=customJsonDecoder)
     print(f"Name: {response.name}\nAddress: {response.address}")
+    #prova
 
 
 Connected = False
