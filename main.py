@@ -10,8 +10,8 @@ def customJsonDecoder(studentDict):
 
 def on_message(client, userdata, message):
     print("received message =",str(message.payload.decode("utf-8")))
-    student = json.loads(message.payload, object_hook=customJsonDecoder)
-    print(f"Name: {student.name}\nAddress: {student.address}")
+    response = json.loads(message.payload, object_hook=customJsonDecoder)
+    print(f"Name: {response.name}\nAddress: {response.address}")
 
 
 Connected = False
